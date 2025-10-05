@@ -11,7 +11,7 @@ Apply two-qubit gates (CX, CY)
 View the statevector and measure all qubits and view simulation results.It also prints the circuit design and displays the statevector of the system before measurement.
 
 
-1.Importing required libraries
+1.𝗜𝗺𝗽𝗼𝗿𝘁𝗶𝗻𝗴 𝗿𝗲𝗾𝘂𝗶𝗿𝗲𝗱 𝗹𝗶𝗯𝗿𝗮𝗿𝗶𝗲𝘀
 
 from qiskit import QuantumCircuit,QuantumRegister,ClassicalRegister
 
@@ -29,7 +29,7 @@ QuantumCircuit → builds the actual circuit.
 Statevector → helps simulate the complete quantum state (amplitudes of all possible outcomes).
 
 
-2. Creating Registers and Circuit
+2.𝗖𝗿𝗲𝗮𝘁𝗶𝗻𝗴 𝗥𝗲𝗴𝗶𝘀𝘁𝗲𝗿𝘀 𝗮𝗻𝗱 𝗖𝗶𝗿𝗰𝘂𝗶𝘁
 
 qreg = QuantumRegister(2, 'q')
 
@@ -40,8 +40,7 @@ qc = QuantumCircuit(qreg, creg)
 Here, we create 2 -bit Classical Register and 2- quibt Quantum Register
 
 
-
-3. Applying Single-Qubit Gates
+3. 𝗔𝗽𝗽𝗹𝘆𝗶𝗻𝗴 𝗦𝗶𝗻𝗴𝗹𝗲-𝗤𝘂𝗯𝗶𝘁 𝗚𝗮𝘁𝗲𝘀
 
 qc.h(qreg[0]) 
 
@@ -57,7 +56,7 @@ S gate adds a 90° phase shift to q0.
 
 
 
-4. Applying Two-Qubit Gates
+4. 𝗔𝗽𝗽𝗹𝘆𝗶𝗻𝗴 𝗧𝘄𝗼-𝗤𝘂𝗯𝗶𝘁 𝗚𝗮𝘁𝗲𝘀
 
 qc.cx(qreg[0], qreg[1]) 
 
@@ -70,14 +69,14 @@ CY gate applies a Y rotation on q0 if q1 is |1⟩.
 
 These gates create entanglement between the qubits.
 
-5.Displaying the Circuit
+5.𝗗𝗶𝘀𝗽𝗹𝗮𝘆𝗶𝗻𝗴 𝘁𝗵𝗲 𝗖𝗶𝗿𝗰𝘂𝗶𝘁
 
 qc.draw()
 
 This statement helps us to display the circuit i.e draw it in terminal.
 
 
-6. Generating the Statevector
+6. 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗶𝗻𝗴 𝘁𝗵𝗲 𝗦𝘁𝗮𝘁𝗲𝘃𝗲𝗰𝘁𝗼𝗿
 
 state = Statevector.from_instruction(qc)
 
@@ -86,7 +85,7 @@ Converts the entire circuit (before measurement) into a statevector.
 The statevector represents all possible outcomes of the system as complex amplitudes.
 
 
-7. Printing the Statevector
+7. 𝗣𝗿𝗶𝗻𝘁𝗶𝗻𝗴 𝘁𝗵𝗲 𝗦𝘁𝗮𝘁𝗲𝘃𝗲𝗰𝘁𝗼𝗿
 
 print("StateVector")
 
@@ -102,15 +101,15 @@ Displays:
 2.The probability of measuring that state
 
 
-8. Adding Measurement
-9. 
+8. 𝗔𝗱𝗱𝗶𝗻𝗴 𝗠𝗲𝗮𝘀𝘂𝗿𝗲𝗺𝗲𝗻𝘁
+ 
 qc.measure(qreg, creg)
 
 Measures both qubits and stores their results in classical bits.
 Measurement collapses the quantum state to one definite outcome.
 
 
-9. Simulating Measurement Outcomes
+9. 𝗦𝗶𝗺𝘂𝗹𝗮𝘁𝗶𝗻𝗴 𝗠𝗲𝗮𝘀𝘂𝗿𝗲𝗺𝗲𝗻𝘁 𝗢𝘂𝘁𝗰𝗼𝗺𝗲𝘀
 
 counts = state.sample_counts(shots=1024)
 
@@ -123,7 +122,7 @@ Simulates 1024 shots (measurements) of the circuit.
 
 counts shows how many times each outcome appeared (like {'00': 512, '11': 512}).
 
-Example Output
+𝗘𝘅𝗮𝗺𝗽𝗹𝗲 𝗢𝘂𝘁𝗽𝘂𝘁
 
      ┌───┐┌───┐┌───┐
 q_0: ┤ H ├┤ S ├┤ Y ├
