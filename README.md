@@ -11,7 +11,7 @@ Apply two-qubit gates (CX, CY)
 View the statevector and measure all qubits and view simulation results.It also prints the circuit design and displays the statevector of the system before measurement.
 
 
-1. Importing Required Libraries
+1.Importing required libraries
 
 from qiskit import QuantumCircuit,QuantumRegister,ClassicalRegister
 
